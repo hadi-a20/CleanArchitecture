@@ -1,0 +1,19 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/CleanArchitect.Presentation.Mappers/obj
+/CleanArchitect.Presentation.Mappers/bin/Debug/net7.0
+/CleanArchitect.Presentation.Contracts/obj
+/CleanArchitect.Presentation.Contracts/bin/Debug/net7.0
+/CleanArchitect.Presentation.Api/obj
+/CleanArchitect.Presentation.Api/bin/Debug/net7.0
+/CleanArchitect.Infrastructure.Persistence/obj
+/CleanArchitect.Infrastructure.Persistence/bin/Debug/net7.0
+/CleanArchitect.Infrastructure.Core/obj
+/CleanArchitect.Infrastructure.Core/bin/Debug/net7.0
+/CleanArchitect.Domain/obj
+/CleanArchitect.Domain/bin/Debug/net7.0
+/CleanArchitect.Application/obj
+/CleanArchitect.Application/bin/Debug/net7.0
+/CleanArchitect/obj/Debug/net7.0
