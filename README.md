@@ -1,4 +1,4 @@
-**# Clean Architecture Showcase **
+## Clean Architecture Showcase
 
 Welcome to this repository where clean architecture principles come to life!
 ## Overview
@@ -21,8 +21,8 @@ Frameworks/Libraries:
 . Mapster
 
 Programming Languages:
-
 .net 8, c#
+
 Databases:
 
 Sql server
@@ -50,9 +50,10 @@ Push to the branch: git push origin my-new-feature
 Open a pull request
 ## License
 
-This project is licensed under the MIT License: [Link to license].
+This project is licensed under the MIT License.
 ## Contact
 
 Hadi Ardebili
 hadiardebili@gmail.com
+
 **# Happy coding! **
