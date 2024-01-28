@@ -6,4 +6,17 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+    <PackageReference Include="Mediator.Abstractions" Version="2.1.7" />
+    <PackageReference Include="Mediator.SourceGenerator" Version="2.1.7">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CleanArchitect.Domain\CleanArchitect.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
