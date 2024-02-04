@@ -38,8 +38,12 @@ public class RegisterCommandHandler : ICommandHandler<RegisterCommand, Result<Au
             lastName: request.LastName,
             email: request.Email,
             password: request.Password);
+        if (user.IsError)
+        {
+            return user.Errors;
+        }
+        
         user = await _userRepository.AddAsync(user.Value, cancellationToken);
-
         if (!user.IsError)
         {
             var token = _jwtTokenGenerator.GenerateToken(user.Value);

@@ -6,4 +6,14 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Mapster" Version="7.4.0" />
+    <PackageReference Include="Mapster.DependencyInjection" Version="1.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CleanArchitect.Application\CleanArchitect.Application.csproj" />
+    <ProjectReference Include="..\CleanArchitect.Presentation.Contracts\CleanArchitect.Presentation.Contracts.csproj" />
+  </ItemGroup>
+
 </Project>

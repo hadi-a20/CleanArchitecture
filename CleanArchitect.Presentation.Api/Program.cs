@@ -1,23 +1,41 @@
-var builder = WebApplication.CreateBuilder(args);
+using CleanArchitect.Application;
+using CleanArchitect.Infrastructure.Core;
+using CleanArchitect.Infrastructure.Persistence;
+using CleanArchitect.Presentation.Api;
+using CleanArchitect.Presentation.Mappers;
 
-// Add services to the container.
-
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-
-var app = builder.Build();
-
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+try
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    var builder = WebApplication.CreateBuilder(args);
+    {
+        builder.Services
+            .AddApi()
+            .AddCore(builder.Configuration)
+            .AddApplication()
+            .AddPersistence()
+            .AddMappings(builder.Configuration);
+    };
+
+    var app = builder.Build();
+    {
+        app.UseExceptionHandler("/error");
+        app.UseHttpsRedirection();
+        if (app.Environment.IsDevelopment())
+        {
+            app.UseSwagger();
+            app.UseSwaggerUI();
+        }
+        app.UseAuthentication();
+        app.UseAuthorization();
+        app.MapControllers();
+        app.Run();
+    }
 }
-
-app.UseAuthorization();
-
-app.MapControllers();
-
-app.Run();
+catch (Exception ex)
+{
+    return 1;
+}
+finally
+{
+}
+return 0;
