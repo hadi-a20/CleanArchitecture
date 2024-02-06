@@ -5,6 +5,7 @@ using Microsoft.Extensions.Options;
 using System.Diagnostics;
 using CleanArchitect.Domain.Common.BaseErrors;
 using CleanArchitect.Presentation.Api.Common.Http;
+using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace CleanArchitect.Presentation.Api.Common.Errors;
 
@@ -73,6 +74,8 @@ public class CustomProblemDetailsFactory : ProblemDetailsFactory
         string? detail = null,
         string? instance = null)
     {
-        return new ValidationProblemDetails(modelStateDictionary);
+        var validationProblems = new ValidationProblemDetails(modelStateDictionary);
+        validationProblems.Status = 400;
+        return validationProblems;
     }
 }
