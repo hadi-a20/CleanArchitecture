@@ -20,7 +20,7 @@ try
             .AddApi()
             .AddCore(builder.Configuration)
             .AddApplication()
-            .AddPersistence()
+            .AddPersistence(builder.Configuration)
             .AddMappings(builder.Configuration);
     };
 
